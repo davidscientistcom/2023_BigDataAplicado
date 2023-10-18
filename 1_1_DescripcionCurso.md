@@ -19,7 +19,7 @@ Tenemos una asignación horaria de 120 horas, de las cuales tendremos 4 a la sem
 
 # 02.1 Bloques
 
-![Bloques del módulo](/images/01/bloques.png)
+![Bloques del módulo](images/01/bloques.png)
 
 Tal y como podemos observar de la anterior imagen, hemos dividido el módulo en cuatro bloques claramente identificables. 
 
@@ -54,7 +54,7 @@ En la segunda parte desarrollaremos pequeños proyectos que nos harán entender 
 
 
 # 03. Profesor
-El profesor encargado de impartir la asignatura, soy yo, David Granados Zafra y estaré encantado de atenderos en dgrnados@iessanvicente.com si tenéis cualquier tipo de duda o solicitud de tutorías.
+El profesor encargado de impartir la asignatura, soy yo, David Granados Zafra y estaré encantado de atenderos en dgranados@iessanvicente.com si tenéis cualquier tipo de duda o solicitud de tutorías.
 
 Los contenidos de la asignatura se añadirán tanto en aules como en esta página. Con la diferencia de que la idea es que cuando terminéis el curso siempre podáis acceder a la información más actualizada en este sitio web.
 

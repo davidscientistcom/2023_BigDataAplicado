@@ -20,7 +20,7 @@ Big Data es un proceso caro, pensemos que necesitaremos:
 Por lo tanto aunque Big Data e IA, están muy de moda, deberemos de asegurarnos de que es realmente necesario acudir al Big Data. En definitiva podemos caer el típico problma de un sobrecoste y sobreesfuerzo por intentar matar moscas a cañonazos.
 
 Fijémonos en la siguiente imagen:
-![Bloques del módulo](/images/02/tam.png)
+![Bloques del módulo](images/02/tam.png)
 
 
 
