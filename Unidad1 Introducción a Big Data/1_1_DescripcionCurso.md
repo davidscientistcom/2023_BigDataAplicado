@@ -19,7 +19,7 @@ Tenemos una asignación horaria de 120 horas, de las cuales tendremos 4 a la sem
 
 # 02.1 Bloques
 
-![Bloques del módulo](images/01/bloques.png)
+![Bloques del módulo](../images/01/bloques.png)
 
 Tal y como podemos observar de la anterior imagen, hemos dividido el módulo en cuatro bloques claramente identificables. 
 
