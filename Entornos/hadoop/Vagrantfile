@@ -1,0 +1,32 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+
+#ENV["JAVA_HOME"] = "/usr/lib/jvm/java-11-openjdk-amd64"
+#ENV["HADOOP_HOME"] ="$HOME/hadoop-3.3.1"
+#ENV["YARN_CONF_DIR"] = "$HADOOP_HOME/etc/hadoop/conf"
+#ENV["PATH=$PATH:$JAVA_HOME/bin:$HADOOP_HOME/bin"]
+
+Vagrant.configure("2") do |config|
+  # Seleccionar la imagen de Ubuntu server 22.04
+  config.vm.box = "adavilag/ubuntu-server-22.04.1"
+  # Asignar una IP personalizada de la red privada
+  config.vm.network "private_network", ip: "192.168.33.10"
+
+  config.vm.provider "virtualbox" do |vb|  # Configuramos el hardware de la máquina    
+    vb.memory = "2048" # Queremos 2Gb de RAM    
+    vb.cpus = 2 # Seleccionamos 2 cpus
+    vb.gui = true  # Habilitar la interfaz gráfica
+  end
+  config.vm.provision "shell", inline: <<-SHELL
+    apt update && apt upgrade -y
+    apt install -y openjdk-11-jdk
+
+    wget https://downloads.apache.org/hadoop/common/hadoop-3.3.1/hadoop-3.3.1.tar.gz
+    tar -xvf hadoop-3.3.1.tar.gz
+    echo 'He terminado de descomprimir el hadoop'
+  SHELL
+
+  config.vm.provision "file", source:"bashrc", destination: "/home/vagrant/.bashrc"
+
+end

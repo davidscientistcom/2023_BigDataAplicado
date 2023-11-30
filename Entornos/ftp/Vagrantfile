@@ -1,0 +1,28 @@
+
+Vagrant.configure(2) do |config|
+
+  config.vm.box = "adavilag/ubuntu-server-22.04.1"
+
+  config.vm.provider "virtualbox" do |vb|  # Configuramos el hardware de la máquina    
+    vb.memory = "2048" # Queremos 2Gb de RAM    
+    vb.cpus = 2 # Seleccionamos 2 cpus
+    vb.gui = true  # Habilitar la interfaz gráfica
+
+  end
+
+  config.vm.define "db-server" do |db|
+      db.vm.network "private_network", ip: "192.168.1.250"
+      db.vm.boot_timeout = 600
+      db.disksize.size = "50GB"
+      
+  end
+  config.vm.provision "file", source:"vsftpd.conf", destination: "/tmp/vsftpd.conf"
+  config.vm.provision "file", source:"vagrant.pub", destination: "/tmp/vagrant.pub"
+
+  config.vm.provision "shell", inline: <<-SHELL, run: "always"
+		sudo loadkeys es
+	SHELL
+
+  config.vm.provision "shell", path: "Bootstrap.sh"
+
+end   
