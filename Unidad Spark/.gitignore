@@ -1,0 +1,8 @@
+ContadorDePalabras/.bsp/
+ContadorDePalabras/project/
+ContadorDePalabras/target/
+ContadorDePalabras/src/main/scala/example
+.metals/
+.vscode/
+settings.json
+cosas.txt
