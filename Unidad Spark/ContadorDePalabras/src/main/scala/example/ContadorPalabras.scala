@@ -8,11 +8,9 @@ object ContadorPalabras {
       .master("local[*]") // Ejecuta localmente con todos los núcleos disponibles
       .getOrCreate()
 
-    // SparkContext se utiliza para interactuar con RDDs
-    val sc = spark.sparkContext
-
+ 
     // Lee el archivo de texto como un RDD
-    val texto = sc.textFile("libro.txt")
+    val texto = spark.sparkContext.textFile("libro.txt")
 
     // Realiza la operación de conteo de palabras
     val conteoPalabras = texto.flatMap(linea => linea.split("\\W+")) // "\\W+" divide por cualquier carácter no alfabético
